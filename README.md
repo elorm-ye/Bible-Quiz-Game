@@ -22,9 +22,14 @@ This game was explicitly architected to bypass heavy frameworks and bulky Deskto
 
 ## How to Play
 
-Because the project relies on a frictionless lightweight python wrapper, there is no bulky `npm install` needed. You simply need [Python installed](https://www.python.org/downloads/) on your local presentation machine.
+### 🚀 Easiest Method (Windows Only)
+You do **not** need to install Python or understand code to play this! Simply download the pre-packaged App!
+1. Click on the file named `BibleQuiz_Windows_App.exe` directly inside this GitHub repository folder.
+2. Click the **"Download raw file"** button (or the Download icon) to save it to your computer.
+3. Double-click the downloaded `.exe` file on your Desktop, and the game will instantly pop open in a full, gorgeous Desktop Window! You can load this on a USB stick and play offline indefinitely. 
 
-### Windows / Mac / Linux
+### ⚙️ Developer Method (Mac / Linux / Windows)
+If you want to modify code or you are on Mac/Linux, you can run the uncompiled backend via Python directly:
 1. Clone this repository or download the ZIP to your computer:
    ```bash
    git clone https://github.com/elorm-ye/Bible-Quiz-Game.git
@@ -34,7 +39,7 @@ Because the project relies on a frictionless lightweight python wrapper, there i
    ```bash
    python launch.py
    ```
-3. Your default web browser will automatically open in full-screen mode to `http://localhost:8080`, hosting the game seamlessly. Keep the terminal window open while playing!
+3. Your default web browser will automatically open in full-screen mode to `http://localhost:8080`, hosting the game seamlessly! Keep the black terminal window open while playing.
 
 ## Modifying Questions
 Categories and questions are instantly generated based on the flat local database! To add hundreds of new custom questions without touching any code logic, simply open `questions.json` and append your JSON block.
