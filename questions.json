@@ -1,482 +1,1240 @@
 [
   {
     "question": "Who built the ark?",
-    "options": ["Moses", "Noah", "David", "Paul"],
+    "options": [
+      "Moses",
+      "Noah",
+      "David",
+      "Paul"
+    ],
     "answer": "Noah",
-    "category": "Old Testament"
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was swallowed by a great fish?",
-    "options": ["Jonah", "Peter", "Jesus", "John"],
+    "options": [
+      "Jonah",
+      "Peter",
+      "Jesus",
+      "John"
+    ],
     "answer": "Jonah",
-    "category": "Characters"
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which sea did Moses part to let the Israelites cross?",
-    "options": ["Dead Sea", "Mediterranean Sea", "Red Sea", "Sea of Galilee"],
+    "options": [
+      "Dead Sea",
+      "Mediterranean Sea",
+      "Red Sea",
+      "Sea of Galilee"
+    ],
     "answer": "Red Sea",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the first man created according to Genesis?",
-    "options": ["Abraham", "Adam", "Enoch", "Seth"],
+    "options": [
+      "Abraham",
+      "Adam",
+      "Enoch",
+      "Seth"
+    ],
     "answer": "Adam",
-    "category": "Old Testament"
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Where was Jesus born?",
-    "options": ["Jerusalem", "Nazareth", "Bethlehem", "Capernaum"],
+    "options": [
+      "Jerusalem",
+      "Nazareth",
+      "Bethlehem",
+      "Capernaum"
+    ],
     "answer": "Bethlehem",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who betrayed Jesus for 30 pieces of silver?",
-    "options": ["Peter", "Judas Iscariot", "Thomas", "John"],
+    "options": [
+      "Peter",
+      "Judas Iscariot",
+      "Thomas",
+      "John"
+    ],
     "answer": "Judas Iscariot",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What did Jesus turn into wine at the wedding in Cana?",
-    "options": ["Sand", "Milk", "Water", "Juice"],
+    "options": [
+      "Sand",
+      "Milk",
+      "Water",
+      "Juice"
+    ],
     "answer": "Water",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who killed Goliath with a sling and a stone?",
-    "options": ["Saul", "Jonathan", "David", "Solomon"],
+    "options": [
+      "Saul",
+      "Jonathan",
+      "David",
+      "Solomon"
+    ],
     "answer": "David",
-    "category": "Characters"
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How many plagues did God send upon Egypt?",
-    "options": ["7", "10", "12", "40"],
+    "options": [
+      "7",
+      "10",
+      "12",
+      "40"
+    ],
     "answer": "10",
-    "category": "Old Testament"
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who is known as the 'weeping prophet'?",
-    "options": ["Isaiah", "Ezekiel", "Jeremiah", "Daniel"],
+    "options": [
+      "Isaiah",
+      "Ezekiel",
+      "Jeremiah",
+      "Daniel"
+    ],
     "answer": "Jeremiah",
-    "category": "Characters"
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "In what river was Jesus baptized?",
-    "options": ["Nile", "Tigris", "Euphrates", "Jordan"],
+    "options": [
+      "Nile",
+      "Tigris",
+      "Euphrates",
+      "Jordan"
+    ],
     "answer": "Jordan",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was thrown into the lions' den?",
-    "options": ["Daniel", "Joseph", "Shadrach", "Moses"],
+    "options": [
+      "Daniel",
+      "Joseph",
+      "Shadrach",
+      "Moses"
+    ],
     "answer": "Daniel",
-    "category": "Characters"
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which disciple denied Jesus three times?",
-    "options": ["John", "Judas", "Peter", "Andrew"],
+    "options": [
+      "John",
+      "Judas",
+      "Peter",
+      "Andrew"
+    ],
     "answer": "Peter",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What food did Jesus multiply to feed 5,000?",
-    "options": ["Apples and grapes", "Loaves and fishes", "Manna and quail", "Bread and wine"],
+    "options": [
+      "Apples and grapes",
+      "Loaves and fishes",
+      "Manna and quail",
+      "Bread and wine"
+    ],
     "answer": "Loaves and fishes",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the mother of Jesus?",
-    "options": ["Elizabeth", "Martha", "Mary", "Ruth"],
+    "options": [
+      "Elizabeth",
+      "Martha",
+      "Mary",
+      "Ruth"
+    ],
     "answer": "Mary",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What did God use to guide the Israelites by night in the wilderness?",
-    "options": ["A bright star", "A pillar of cloud", "A pillar of fire", "A rainbow"],
+    "options": [
+      "A bright star",
+      "A pillar of cloud",
+      "A pillar of fire",
+      "A rainbow"
+    ],
     "answer": "A pillar of fire",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who wrote most of the letters (epistles) in the New Testament?",
-    "options": ["Peter", "John", "Paul", "James"],
+    "options": [
+      "Peter",
+      "John",
+      "Paul",
+      "James"
+    ],
     "answer": "Paul",
-    "category": "New Testament"
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which boy was sold into slavery by his brothers?",
-    "options": ["Benjamin", "Joseph", "Reuben", "Levi"],
+    "options": [
+      "Benjamin",
+      "Joseph",
+      "Reuben",
+      "Levi"
+    ],
     "answer": "Joseph",
-    "category": "Characters"
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What structure did the people build to reach heaven, confusing their languages?",
-    "options": ["Temple of Solomon", "Tower of Babel", "Pyramids", "Walls of Jericho"],
+    "options": [
+      "Temple of Solomon",
+      "Tower of Babel",
+      "Pyramids",
+      "Walls of Jericho"
+    ],
     "answer": "Tower of Babel",
-    "category": "Old Testament"
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who walked on water with Jesus, before doubting and sinking?",
-    "options": ["James", "John", "Peter", "Thomas"],
+    "options": [
+      "James",
+      "John",
+      "Peter",
+      "Thomas"
+    ],
     "answer": "Peter",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the name of the high priest's servant whose ear Peter cut off?",
-    "options": ["Malchus", "Barabbas", "Caiaphas", "Annas"],
+    "options": [
+      "Malchus",
+      "Barabbas",
+      "Caiaphas",
+      "Annas"
+    ],
     "answer": "Malchus",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How old was Methuselah, the oldest person mentioned in the Bible, when he died?",
-    "options": ["969 years", "850 years", "930 years", "999 years"],
+    "options": [
+      "969 years",
+      "850 years",
+      "930 years",
+      "999 years"
+    ],
     "answer": "969 years",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which King of Judah was stricken with leprosy for trying to burn incense in the temple?",
-    "options": ["Josiah", "Uzziah", "Ahab", "Hezekiah"],
+    "options": [
+      "Josiah",
+      "Uzziah",
+      "Ahab",
+      "Hezekiah"
+    ],
     "answer": "Uzziah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the only female judge of Israel?",
-    "options": ["Esther", "Ruth", "Deborah", "Miriam"],
+    "options": [
+      "Esther",
+      "Ruth",
+      "Deborah",
+      "Miriam"
+    ],
     "answer": "Deborah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What kind of wood was the Ark of the Covenant made of?",
-    "options": ["Cedar", "Gopher wood", "Acacia wood", "Olive wood"],
+    "options": [
+      "Cedar",
+      "Gopher wood",
+      "Acacia wood",
+      "Olive wood"
+    ],
     "answer": "Acacia wood",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What is the shortest book in the Old Testament?",
-    "options": ["Joel", "Nahum", "Obadiah", "Micah"],
+    "options": [
+      "Joel",
+      "Nahum",
+      "Obadiah",
+      "Micah"
+    ],
     "answer": "Obadiah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "In the Book of Revelation, which church was described as 'lukewarm'?",
-    "options": ["Ephesus", "Smyrna", "Philadelphia", "Laodicea"],
+    "options": [
+      "Ephesus",
+      "Smyrna",
+      "Philadelphia",
+      "Laodicea"
+    ],
     "answer": "Laodicea",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which prophet was taken up to heaven in a whirlwind by a chariot of fire?",
-    "options": ["Elisha", "Enoch", "Elijah", "Isaiah"],
+    "options": [
+      "Elisha",
+      "Enoch",
+      "Elijah",
+      "Isaiah"
+    ],
     "answer": "Elijah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the father of John the Baptist?",
-    "options": ["Zechariah", "Joseph", "Simeon", "Nicodemus"],
+    "options": [
+      "Zechariah",
+      "Joseph",
+      "Simeon",
+      "Nicodemus"
+    ],
     "answer": "Zechariah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "To which city was Saul traveling when he was blinded by a great light?",
-    "options": ["Jerusalem", "Antioch", "Damascus", "Tarsus"],
+    "options": [
+      "Jerusalem",
+      "Antioch",
+      "Damascus",
+      "Tarsus"
+    ],
     "answer": "Damascus",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the father of King David?",
-    "options": ["Jesse", "Saul", "Samuel", "Solomon"],
+    "options": [
+      "Jesse",
+      "Saul",
+      "Samuel",
+      "Solomon"
+    ],
     "answer": "Jesse",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the name of Moses' sister?",
-    "options": ["Leah", "Rachel", "Miriam", "Hannah"],
+    "options": [
+      "Leah",
+      "Rachel",
+      "Miriam",
+      "Hannah"
+    ],
     "answer": "Miriam",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which king asked God for wisdom to rule his people?",
-    "options": ["David", "Saul", "Hezekiah", "Solomon"],
+    "options": [
+      "David",
+      "Saul",
+      "Hezekiah",
+      "Solomon"
+    ],
     "answer": "Solomon",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the first Christian martyr recorded in the book of Acts?",
-    "options": ["Peter", "James", "Stephen", "Paul"],
+    "options": [
+      "Peter",
+      "James",
+      "Stephen",
+      "Paul"
+    ],
     "answer": "Stephen",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "On which island was John exiled when he wrote Revelation?",
-    "options": ["Cyprus", "Patmos", "Malta", "Crete"],
+    "options": [
+      "Cyprus",
+      "Patmos",
+      "Malta",
+      "Crete"
+    ],
     "answer": "Patmos",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What kind of bird brought Elijah food while he was in hiding?",
-    "options": ["Eagle", "Dove", "Raven", "Quail"],
+    "options": [
+      "Eagle",
+      "Dove",
+      "Raven",
+      "Quail"
+    ],
     "answer": "Raven",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who replaced Judas Iscariot as an apostle?",
-    "options": ["Paul", "Matthias", "Barnabas", "Silas"],
+    "options": [
+      "Paul",
+      "Matthias",
+      "Barnabas",
+      "Silas"
+    ],
     "answer": "Matthias",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who recognized Jesus as the Messiah when he was presented at the Temple as a baby?",
-    "options": ["Nicodemus", "Zechariah", "Simeon", "Caiaphas"],
+    "options": [
+      "Nicodemus",
+      "Zechariah",
+      "Simeon",
+      "Caiaphas"
+    ],
     "answer": "Simeon",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which disciple found a coin in the mouth of a fish to pay the temple tax?",
-    "options": ["John", "Peter", "Andrew", "James"],
+    "options": [
+      "John",
+      "Peter",
+      "Andrew",
+      "James"
+    ],
     "answer": "Peter",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the profession of Luke, the Gospel writer?",
-    "options": ["Fisherman", "Tax Collector", "Tentmaker", "Physician"],
+    "options": [
+      "Fisherman",
+      "Tax Collector",
+      "Tentmaker",
+      "Physician"
+    ],
     "answer": "Physician",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who interpreted Nebuchadnezzar's dream of a large statue?",
-    "options": ["Ezekiel", "Daniel", "Isaiah", "Jeremiah"],
+    "options": [
+      "Ezekiel",
+      "Daniel",
+      "Isaiah",
+      "Jeremiah"
+    ],
     "answer": "Daniel",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the oldest son of Jacob?",
-    "options": ["Joseph", "Levi", "Judah", "Reuben"],
+    "options": [
+      "Joseph",
+      "Levi",
+      "Judah",
+      "Reuben"
+    ],
     "answer": "Reuben",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How many men were chosen to serve the Greek-speaking widows in Acts chapter 6?",
-    "options": ["Three", "Seven", "Twelve", "Seventy"],
+    "options": [
+      "Three",
+      "Seven",
+      "Twelve",
+      "Seventy"
+    ],
     "answer": "Seven",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Under what kind of tree did Elijah sit when he asked God to let him die?",
-    "options": ["Fig tree", "Broom tree", "Olive tree", "Cedar tree"],
+    "options": [
+      "Fig tree",
+      "Broom tree",
+      "Olive tree",
+      "Cedar tree"
+    ],
     "answer": "Broom tree",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What group of people was Paul addressing on Mars Hill (Areopagus)?",
-    "options": ["Corinthians", "Ephesians", "Athenians", "Romans"],
+    "options": [
+      "Corinthians",
+      "Ephesians",
+      "Athenians",
+      "Romans"
+    ],
     "answer": "Athenians",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Besides gold and frankincense, what was the third gift the Magi brought to Jesus?",
-    "options": ["Silver", "Myrrh", "Bronze", "Spices"],
+    "options": [
+      "Silver",
+      "Myrrh",
+      "Bronze",
+      "Spices"
+    ],
     "answer": "Myrrh",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who said, 'Am I my brother's keeper?'",
-    "options": ["Esau", "Jacob", "Cain", "Abel"],
+    "options": [
+      "Esau",
+      "Jacob",
+      "Cain",
+      "Abel"
+    ],
     "answer": "Cain",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the name of the place where Jesus was crucified?",
-    "options": ["Gethsemane", "Golgotha", "Bethany", "Mount of Olives"],
+    "options": [
+      "Gethsemane",
+      "Golgotha",
+      "Bethany",
+      "Mount of Olives"
+    ],
     "answer": "Golgotha",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which Old Testament book contains the phrase 'Vanity of vanities, all is vanity'?",
-    "options": ["Proverbs", "Psalms", "Ecclesiastes", "Song of Solomon"],
+    "options": [
+      "Proverbs",
+      "Psalms",
+      "Ecclesiastes",
+      "Song of Solomon"
+    ],
     "answer": "Ecclesiastes",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the father of James and John?",
-    "options": ["Alphaeus", "Zebedee", "Jonah", "Joseph"],
+    "options": [
+      "Alphaeus",
+      "Zebedee",
+      "Jonah",
+      "Joseph"
+    ],
     "answer": "Zebedee",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What did Jacob call the place where he wrestled with God?",
-    "options": ["Bethel", "Peniel", "Shiloh", "Shechem"],
+    "options": [
+      "Bethel",
+      "Peniel",
+      "Shiloh",
+      "Shechem"
+    ],
     "answer": "Peniel",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which prophet married a prostitute named Gomer at God's command?",
-    "options": ["Hosea", "Amos", "Micah", "Malachi"],
+    "options": [
+      "Hosea",
+      "Amos",
+      "Micah",
+      "Malachi"
+    ],
     "answer": "Hosea",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "In what city was the first Christian church established?",
-    "options": ["Antioch", "Rome", "Jerusalem", "Ephesus"],
+    "options": [
+      "Antioch",
+      "Rome",
+      "Jerusalem",
+      "Ephesus"
+    ],
     "answer": "Jerusalem",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was Paul's main companion during his first missionary journey?",
-    "options": ["Silas", "Timothy", "Barnabas", "Titus"],
+    "options": [
+      "Silas",
+      "Timothy",
+      "Barnabas",
+      "Titus"
+    ],
     "answer": "Barnabas",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How many days did Jesus fast in the wilderness?",
-    "options": ["7", "12", "30", "40"],
+    "options": [
+      "7",
+      "12",
+      "30",
+      "40"
+    ],
     "answer": "40",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which king had a fiery furnace heating up seven times hotter than normal?",
-    "options": ["Belshazzar", "Darius", "Cyrus", "Nebuchadnezzar"],
+    "options": [
+      "Belshazzar",
+      "Darius",
+      "Cyrus",
+      "Nebuchadnezzar"
+    ],
     "answer": "Nebuchadnezzar",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the mother of Samuel the prophet?",
-    "options": ["Peninnah", "Hannah", "Sarah", "Elizabeth"],
+    "options": [
+      "Peninnah",
+      "Hannah",
+      "Sarah",
+      "Elizabeth"
+    ],
     "answer": "Hannah",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which prophet's donkey spoke to him?",
-    "options": ["Balaam", "Elisha", "Jonah", "Nathan"],
+    "options": [
+      "Balaam",
+      "Elisha",
+      "Jonah",
+      "Nathan"
+    ],
     "answer": "Balaam",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "To whom did Jesus say, 'I am the resurrection and the life'?",
-    "options": ["Mary", "Martha", "Sarah", "Ruth"],
+    "options": [
+      "Mary",
+      "Martha",
+      "Sarah",
+      "Ruth"
+    ],
     "answer": "Martha",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the name of the demon-possessed man who lived in the tombs and broke his chains?",
-    "options": ["Legion", "Beelzebub", "Lucifer", "Leviathan"],
+    "options": [
+      "Legion",
+      "Beelzebub",
+      "Lucifer",
+      "Leviathan"
+    ],
     "answer": "Legion",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who ordered the execution of John the Baptist?",
-    "options": ["Herod the Great", "Herod Antipas", "Pontius Pilate", "Caesar Augustus"],
+    "options": [
+      "Herod the Great",
+      "Herod Antipas",
+      "Pontius Pilate",
+      "Caesar Augustus"
+    ],
     "answer": "Herod Antipas",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What is the longest chapter in the Bible?",
-    "options": ["Psalm 23", "Isaiah 53", "Psalm 119", "Romans 8"],
+    "options": [
+      "Psalm 23",
+      "Isaiah 53",
+      "Psalm 119",
+      "Romans 8"
+    ],
     "answer": "Psalm 119",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How many books are in the New Testament?",
-    "options": ["39", "27", "66", "12"],
+    "options": [
+      "39",
+      "27",
+      "66",
+      "12"
+    ],
     "answer": "27",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who asked Pilate for the body of Jesus after His crucifixion?",
-    "options": ["Nicodemus", "John", "Peter", "Joseph of Arimathea"],
+    "options": [
+      "Nicodemus",
+      "John",
+      "Peter",
+      "Joseph of Arimathea"
+    ],
     "answer": "Joseph of Arimathea",
-    "category": "Apostles & Disciples"
+    "category": "Apostles & Disciples",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What kind of wood was Noah's Ark made of?",
-    "options": ["Cedar", "Gopher wood", "Acacia wood", "Olive wood"],
+    "options": [
+      "Cedar",
+      "Gopher wood",
+      "Acacia wood",
+      "Olive wood"
+    ],
     "answer": "Gopher wood",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the firstborn son of Abraham?",
-    "options": ["Isaac", "Esau", "Ishmael", "Jacob"],
+    "options": [
+      "Isaac",
+      "Esau",
+      "Ishmael",
+      "Jacob"
+    ],
     "answer": "Ishmael",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the high priest during Jesus' trial?",
-    "options": ["Annas", "Caiaphas", "Aaron", "Eli"],
+    "options": [
+      "Annas",
+      "Caiaphas",
+      "Aaron",
+      "Eli"
+    ],
     "answer": "Caiaphas",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which Roman governor washed his hands of Jesus' blood?",
-    "options": ["Festus", "Felix", "Agrippa", "Pontius Pilate"],
+    "options": [
+      "Festus",
+      "Felix",
+      "Agrippa",
+      "Pontius Pilate"
+    ],
     "answer": "Pontius Pilate",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What type of insect did John the Baptist eat in the desert?",
-    "options": ["Beetles", "Locusts", "Crickets", "Grubs"],
+    "options": [
+      "Beetles",
+      "Locusts",
+      "Crickets",
+      "Grubs"
+    ],
     "answer": "Locusts",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "In what river was Naaman the leper healed?",
-    "options": ["Nile", "Tigris", "Euphrates", "Jordan"],
+    "options": [
+      "Nile",
+      "Tigris",
+      "Euphrates",
+      "Jordan"
+    ],
     "answer": "Jordan",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which of Jacob's sons had a coat of many colors?",
-    "options": ["Benjamin", "Reuben", "Judah", "Joseph"],
+    "options": [
+      "Benjamin",
+      "Reuben",
+      "Judah",
+      "Joseph"
+    ],
     "answer": "Joseph",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What was the name of Abraham's wife?",
-    "options": ["Rebekah", "Rachel", "Sarah", "Leah"],
+    "options": [
+      "Rebekah",
+      "Rachel",
+      "Sarah",
+      "Leah"
+    ],
     "answer": "Sarah",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "How many spies did Moses send to explore the Promised Land?",
-    "options": ["2", "7", "10", "12"],
+    "options": [
+      "2",
+      "7",
+      "10",
+      "12"
+    ],
     "answer": "12",
-    "category": "Competitive Run"
+    "category": "Competitive Run",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who was the judge who defeated the Midianites with only 300 men?",
-    "options": ["Samson", "Gideon", "Barak", "Jephthah"],
+    "options": [
+      "Samson",
+      "Gideon",
+      "Barak",
+      "Jephthah"
+    ],
     "answer": "Gideon",
-    "category": "Kings & Prophets"
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who survived the lion's den?",
-    "options": ["Shadrach", "Meshach", "Abednego", "Daniel"],
+    "options": [
+      "Shadrach",
+      "Meshach",
+      "Abednego",
+      "Daniel"
+    ],
     "answer": "Daniel",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which Gospel focuses most on Jesus as a King?",
-    "options": ["Matthew", "Mark", "Luke", "John"],
+    "options": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ],
     "answer": "Matthew",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Which Jewish feast was being celebrated when the Holy Spirit descended in Acts 2?",
-    "options": ["Passover", "Tabernacles", "Pentecost", "Purim"],
+    "options": [
+      "Passover",
+      "Tabernacles",
+      "Pentecost",
+      "Purim"
+    ],
     "answer": "Pentecost",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "Who wrote the Book of Revelation?",
-    "options": ["Paul", "Peter", "Luke", "John"],
+    "options": [
+      "Paul",
+      "Peter",
+      "Luke",
+      "John"
+    ],
     "answer": "John",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What physical ailment did Paul experience on the road to Damascus?",
-    "options": ["Deafness", "Lameness", "Leprosy", "Blindness"],
+    "options": [
+      "Deafness",
+      "Lameness",
+      "Leprosy",
+      "Blindness"
+    ],
     "answer": "Blindness",
-    "category": "Miracles"
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
   },
   {
     "question": "What does the word 'Emmanuel' mean?",
-    "options": ["God saves", "God with us", "Anointed one", "Prince of Peace"],
+    "options": [
+      "God saves",
+      "God with us",
+      "Anointed one",
+      "Prince of Peace"
+    ],
     "answer": "God with us",
-    "category": "Deep Doctrine"
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Search the Scriptures!",
+    "hint": "Think historically."
+  },
+  {
+    "question": "Jesus was born in Jerusalem.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "easy",
+    "reference": "Micah 5:2",
+    "hint": "He was born in the city of David."
+  },
+  {
+    "question": "For God so loved the world that he gave his one and only _, that whoever believes in him shall not perish...",
+    "options": [],
+    "answer": "Son",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "reference": "John 3:16",
+    "hint": "A three letter word."
+  },
+  {
+    "question": "I was a shepherd, I killed a giant, and I became king. Who am I?",
+    "options": [
+      "Saul",
+      "David",
+      "Solomon",
+      "Samuel"
+    ],
+    "answer": "David",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "easy",
+    "reference": "1 Samuel 17",
+    "hint": "He wrote many Psalms."
   }
 ]
