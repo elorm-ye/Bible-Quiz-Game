@@ -1,21 +1,21 @@
-# 📖 Interactive Bible Quiz Game
+# Interactive Bible Quiz Game
 
 An immersive, fast-paced, "Duolingo-style" Bible Quiz game designed specifically for youth groups and Sunday service events. Built with pure web technologies and packaged to run flawlessly on any Desktop computer using a zero-configuration Python engine.
 
-## ✨ Features
-- **🎮 Gamification System**: Features interactive streak tracking, dynamic point multipliers, and percentage-based UI rewards!
-- **⚡ "Duolingo-style" Visuals**: Fast transitions, brightly colored floating cards, robust box shadows, and engaging character-driven interactions.
-- **🧔🏽‍♂️ Animated Avatars**: Character avatars dynamically `bounce` and `jump` on screen while talking to the player depending on correct or incorrect answers.
-- **🔊 Zero-dependency Sound**: Utilizes the native JavaScript Web Audio API to dynamically synthesize victory chimes and error buzzes completely offline (No `.mp3` or `.wav` files required!).
-- **🗃️ Huge Data Pool**: Comes pre-configured heavily with **80 custom questions** covering advanced categories like *Deep Doctrine, Kings & Prophets, and Miracles*.
-- **⏱️ Time Pressure**: Features a live 15-second visual countdown per question to maintain an exciting, competitive pace!
+## Features
+- **Gamification System**: Features interactive streak tracking, dynamic point multipliers, and percentage-based UI rewards!
+- **"Duolingo-style" Visuals**: Fast transitions, brightly colored floating cards, robust box shadows, and engaging character-driven interactions.
+- **Animated Avatars**: Character avatars dynamically bounce and jump on screen while talking to the player depending on correct or incorrect answers.
+- **Zero-dependency Sound**: Utilizes the native JavaScript Web Audio API to dynamically synthesize victory chimes and error buzzes completely offline (No .mp3 or .wav files required!).
+- **Huge Data Pool**: Comes pre-configured heavily with 80 custom questions covering advanced categories like Deep Doctrine, Kings & Prophets, and Miracles.
+- **Time Pressure**: Features a live 15-second visual countdown per question to maintain an exciting, competitive pace!
 
-## 🛠 Technology Stack
+## Technology Stack
 This game was explicitly architected to bypass heavy frameworks and bulky Desktop Electron/Node.js dependencies. It executes completely natively and universally:
 - **Frontend UI Engine:** Vanilla HTML5, CSS3, JavaScript (DOM Manipulation & Game State)
 - **Backend Launch Engine:** Native Python 3 Server (`http.server` & `webbrowser`)
 
-## 🚀 How to Play
+## How to Play
 
 Because the project relies on a frictionless lightweight python wrapper, there is no bulky `npm install` needed. You simply need [Python installed](https://www.python.org/downloads/) on your local presentation machine.
 
@@ -31,7 +31,7 @@ Because the project relies on a frictionless lightweight python wrapper, there i
    ```
 3. Your default web browser will automatically open in full-screen mode to `http://localhost:8080`, hosting the game seamlessly. Keep the terminal window open while playing!
 
-## 🧩 Modifying Questions
+## Modifying Questions
 Categories and questions are instantly generated based on the flat local database! To add hundreds of new custom questions without touching any code logic, simply open `questions.json` and append your JSON block:
 
 ```json
@@ -45,11 +45,11 @@ Categories and questions are instantly generated based on the flat local databas
 
 The app's rendering engine will instantly pick up any new `category`, gracefully shuffle the options, and inject it seamlessly into the Home Screen cards!
 
-## 📌 Badges & Rewards
+## Badges & Rewards
 At the end of a round, players are ranked and visibly rewarded based on their final percentage and gameplay:
-- `90% or higher`: **🏆 Bible Scholar Badge**
-- `50% or higher`: **🌟 Faith Starter Badge**
-- `5+ Question Streak`: **🔥 Hot Streak Badge**
+- `90% or higher`: **Bible Scholar Badge**
+- `50% or higher`: **Faith Starter Badge**
+- `5+ Question Streak`: **Hot Streak Badge**
 
 ---
 *Created for Sunday Youth Services.*
