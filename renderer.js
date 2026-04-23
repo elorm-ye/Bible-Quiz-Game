@@ -4,23 +4,33 @@ let availableCategories = [];
 let selectedCategory = '';
 let currentQuestions = [];
 let questionIndex = 0;
-let score = 0;
-let streak = 0;
-let maxStreak = 0;
-let timeLeft = 15;
-let timerInterval = null;
 let answerSelected = false;
 
-// New Features State
+// Single Player State
+let score = 0, streak = 0, maxStreak = 0;
+
+// Shared State
+let timeLeft = 15;
+let timerInterval = null;
 let selectedDifficulty = 'Any';
 let ttsEnabled = false;
-let lifelines = { fifty: 1, skip: 1, hint: 1 };
-let leaderboards = JSON.parse(localStorage.getItem('bibleQuizLeaderboard')) || [];
 let currentQuestionType = 'multiple_choice';
+let gameMode = 'single'; // 'single' or 'multi'
+
+// Multiplayer State
+let players = [
+  { name: 'Player 1', score: 0, wrong: 0, lifelines: { fifty: 1, skip: 1, hint:1 } },
+  { name: 'Player 2', score: 0, wrong: 0, lifelines: { fifty: 1, skip: 1, hint:1 } }
+];
+let currentTurn = 0;
+const maxTurnsPerRound = 10; // 5 each
+
+let singleLifelines = { fifty: 1, skip: 1, hint: 1 };
+let leaderboards = JSON.parse(localStorage.getItem('bibleQuizLeaderboard')) || [];
 
 const avatars = ['🧔🏽‍♂️', '🧙‍♂️', '👦🏽', '🧕', '👼', '📜', '🕊️'];
 
-// Audio Synthesis for offline sound effects
+// Audio Synthesis
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 function playSound(type) {
   if (audioCtx.state === 'suspended') audioCtx.resume();
@@ -54,7 +64,6 @@ function playSound(type) {
   }
 }
 
-// Text to Speech
 function speak(text) {
   if (!ttsEnabled) return;
   window.speechSynthesis.cancel();
@@ -63,7 +72,7 @@ function speak(text) {
   window.speechSynthesis.speak(msg);
 }
 
-// DOM Elements
+// DOM
 const screens = {
   welcome: document.getElementById('welcome-screen'),
   category: document.getElementById('category-screen'),
@@ -72,6 +81,7 @@ const screens = {
   leaderboard: document.getElementById('leaderboard-screen')
 };
 const topBar = document.getElementById('top-bar');
+const miniScoreboard = document.getElementById('mini-scoreboard');
 
 function switchScreen(screenKey) {
   Object.values(screens).forEach(s => s.classList.add('hidden'));
@@ -84,14 +94,23 @@ function switchScreen(screenKey) {
 async function init() {
   try {
     const response = await fetch('questions.json');
-    if (!response.ok) throw new Error("Network request failed");
     allQuestions = await response.json();
-    
     availableCategories = [...new Set(allQuestions.map(q => q.category))];
     
     // Bind buttons
+    document.getElementById('mode-select').addEventListener('change', (e) => {
+      document.getElementById('multiplayer-inputs').style.display = e.target.value === 'multi' ? 'flex' : 'none';
+      gameMode = e.target.value;
+    });
+
     document.getElementById('btn-start').addEventListener('click', () => {
       selectedDifficulty = document.getElementById('difficulty-select').value;
+      if(gameMode === 'multi') {
+        players[0].name = document.getElementById('p1-name').value || 'Player 1';
+        players[1].name = document.getElementById('p2-name').value || 'Player 2';
+        players[0].score = 0; players[0].wrong = 0;
+        players[1].score = 0; players[1].wrong = 0;
+      }
       buildCategoryGrid();
       switchScreen('category');
     });
@@ -103,7 +122,7 @@ async function init() {
     document.getElementById('btn-leaderboard').addEventListener('click', showLeaderboards);
     document.getElementById('btn-leaderboard-back').addEventListener('click', () => switchScreen('welcome'));
 
-    // TTS Toggle
+    // TTS
     const ttsBtn = document.getElementById('btn-tts');
     ttsBtn.addEventListener('click', () => {
       ttsEnabled = !ttsEnabled;
@@ -112,21 +131,20 @@ async function init() {
     });
     ttsBtn.classList.add('disabled-icon');
 
-    // Submit Blank
+    // Inputs
     document.getElementById('btn-submit-blank').addEventListener('click', () => {
       const val = document.getElementById('fill-blank-input').value.trim();
       if(!val) return;
       onOptionSelected(val.toLowerCase(), null, currentQuestions[questionIndex].answer.toLowerCase(), []);
     });
 
-    // Lifeline Binds
+    // Lifelines
     document.getElementById('life-5050').addEventListener('click', use5050);
     document.getElementById('life-skip').addEventListener('click', useSkip);
     document.getElementById('life-hint').addEventListener('click', useHint);
 
   } catch (error) {
-    console.error("Failed to load questions", error);
-    alert("Could not load questions data.");
+    console.error(error);
   }
 }
 
@@ -135,61 +153,81 @@ function buildCategoryGrid() {
   grid.innerHTML = '';
   availableCategories.forEach(cat => {
     const card = document.createElement('div');
-    card.className = 'category-card';
-    card.innerText = cat;
-    card.addEventListener('click', () => {
-      selectedCategory = cat;
-      startQuiz();
-    });
+    card.className = 'category-card'; card.innerText = cat;
+    card.addEventListener('click', () => { selectedCategory = cat; startQuiz(); });
     grid.appendChild(card);
   });
   
   const allCard = document.createElement('div');
-  allCard.className = 'category-card';
-  allCard.innerText = 'Mix All';
+  allCard.className = 'category-card'; allCard.innerText = 'Mix All';
   allCard.style.borderColor = 'var(--primary)';
-  allCard.addEventListener('click', () => {
-    selectedCategory = 'All';
-    startQuiz();
-  });
+  allCard.addEventListener('click', () => { selectedCategory = 'All'; startQuiz(); });
   grid.appendChild(allCard);
 }
 
 function startQuiz() {
   let pool = selectedCategory === 'All' ? [...allQuestions] : allQuestions.filter(q => q.category === selectedCategory);
-  
   if (selectedDifficulty !== 'Any') {
     pool = pool.filter(q => (q.difficulty || 'medium').toLowerCase() === selectedDifficulty.toLowerCase());
   }
-  if (pool.length === 0) {
-    alert("No questions found for this difficulty/category combo!");
-    return;
-  }
-
-  currentQuestions = pool.sort(() => 0.5 - Math.random()).slice(0, 15); // max 15 questions per round for pacing
+  
+  let targetQuestions = gameMode === 'multi' ? maxTurnsPerRound : 15;
+  if (pool.length < targetQuestions) { pool = pool.concat(allQuestions).sort(() => 0.5 - Math.random()); }
+  currentQuestions = pool.sort(() => 0.5 - Math.random()).slice(0, targetQuestions);
   
   questionIndex = 0;
-  score = 0;
-  streak = 0;
-  maxStreak = 0;
-  lifelines = { fifty: 1, skip: 1, hint: 1 };
+  answerSelected = false;
+
+  if (gameMode === 'multi') {
+    currentTurn = 0;
+    players.forEach(p => { p.score = 0; p.wrong = 0; p.lifelines = {fifty:1, skip:1, hint:1}; });
+    document.querySelector('.stats-container').classList.add('hidden');
+    miniScoreboard.classList.remove('hidden');
+    updateMiniScoreboard();
+  } else {
+    score = 0; streak = 0; maxStreak = 0;
+    singleLifelines = { fifty: 1, skip: 1, hint: 1 };
+    document.querySelector('.stats-container').classList.remove('hidden');
+    miniScoreboard.classList.add('hidden');
+  }
   
-  updateStats();
   switchScreen('question');
   loadQuestion();
 }
 
+function getCurrentPlayer() {
+  return (currentTurn % 2 === 0) ? players[0] : players[1];
+}
+
 function updateStats() {
-  document.getElementById('score-counter').innerText = score;
-  document.getElementById('streak-counter').innerText = streak;
-  
-  const prog = ((questionIndex) / currentQuestions.length) * 100;
-  document.getElementById('progress-bar-fill').style.width = prog + '%';
-  
-  // Update lifelines buttons
-  document.getElementById('life-5050').disabled = lifelines.fifty <= 0 || currentQuestionType === 'fill_blank';
-  document.getElementById('life-skip').disabled = lifelines.skip <= 0;
-  document.getElementById('life-hint').disabled = lifelines.hint <= 0;
+  if (gameMode === 'multi') {
+    updateMiniScoreboard();
+    let cp = getCurrentPlayer();
+    document.getElementById('life-5050').disabled = cp.lifelines.fifty <= 0 || currentQuestionType === 'fill_blank';
+    document.getElementById('life-skip').disabled = cp.lifelines.skip <= 0;
+    document.getElementById('life-hint').disabled = cp.lifelines.hint <= 0;
+  } else {
+    document.getElementById('score-counter').innerText = score;
+    document.getElementById('streak-counter').innerText = streak;
+    const prog = ((questionIndex) / currentQuestions.length) * 100;
+    document.getElementById('progress-bar-fill').style.width = prog + '%';
+    
+    document.getElementById('life-5050').disabled = singleLifelines.fifty <= 0 || currentQuestionType === 'fill_blank';
+    document.getElementById('life-skip').disabled = singleLifelines.skip <= 0;
+    document.getElementById('life-hint').disabled = singleLifelines.hint <= 0;
+  }
+}
+
+function updateMiniScoreboard() {
+  document.getElementById('p1-mininame').innerText = players[0].name;
+  document.getElementById('p1-miniscore').innerText = players[0].score;
+  document.getElementById('p1-miniwrong').innerText = players[0].wrong;
+  document.getElementById('p2-mininame').innerText = players[1].name;
+  document.getElementById('p2-miniscore').innerText = players[1].score;
+  document.getElementById('p2-miniwrong').innerText = players[1].wrong;
+
+  document.getElementById('p1-row').style.background = (currentTurn % 2 === 0) ? '#d7ffb8' : 'transparent';
+  document.getElementById('p2-row').style.background = (currentTurn % 2 === 1) ? '#d7ffb8' : 'transparent';
 }
 
 function loadQuestion() {
@@ -197,14 +235,22 @@ function loadQuestion() {
   answerSelected = false;
   currentQuestionType = q.type || 'multiple_choice';
   
-  // Timers
+  if (gameMode === 'multi') {
+    let cp = getCurrentPlayer();
+    document.getElementById('turn-announcer').innerText = cp.name + "'s Turn!";
+    document.getElementById('turn-announcer').classList.remove('hidden');
+  } else {
+    document.getElementById('turn-announcer').classList.add('hidden');
+  }
+
   timeLeft = 15;
   document.getElementById('timer-display').innerText = timeLeft;
   document.getElementById('timer-display').style.color = '#ff4b4b';
+  if(gameMode === 'multi') document.getElementById('multi-timer').innerText = timeLeft;
+  
   clearInterval(timerInterval);
   timerInterval = setInterval(timerTick, 1000);
   
-  // UI Reset
   document.getElementById('feedback-footer').classList.add('hidden');
   document.getElementById('feedback-footer').className = '';
   document.getElementById('feedback-footer').classList.add('hidden');
@@ -229,17 +275,14 @@ function renderOptions(q) {
     grid.classList.add('hidden');
     fillArea.classList.remove('hidden');
     const input = document.getElementById('fill-blank-input');
-    input.value = '';
-    input.focus();
+    input.value = ''; input.focus();
   } else {
     grid.classList.remove('hidden');
     fillArea.classList.add('hidden');
-    
     let shuffledOpts = [...q.options].sort(() => 0.5 - Math.random());
     shuffledOpts.forEach(opt => {
       const card = document.createElement('div');
-      card.className = 'option-card';
-      card.innerText = opt;
+      card.className = 'option-card'; card.innerText = opt;
       card.onclick = () => onOptionSelected(opt, card, q.answer, shuffledOpts);
       grid.appendChild(card);
     });
@@ -249,45 +292,47 @@ function renderOptions(q) {
 function timerTick() {
   timeLeft--;
   document.getElementById('timer-display').innerText = timeLeft;
-  if(timeLeft <= 5) document.getElementById('timer-display').style.color = 'darkred';
-  
+  if(gameMode === 'multi') document.getElementById('multi-timer').innerText = timeLeft;
+  if(timeLeft <= 5) {
+    document.getElementById('timer-display').style.color = 'darkred';
+    if(gameMode==='multi') document.getElementById('multi-timer').style.color = 'darkred';
+  }
   if (timeLeft <= 0) {
     clearInterval(timerInterval);
     const cards = document.querySelectorAll('.option-card');
     cards.forEach(c => c.classList.add('disabled'));
-    const q = currentQuestions[questionIndex];
-    onAnswerEvaluated(false, q.answer, cards);
+    onAnswerEvaluated(false, currentQuestions[questionIndex].answer, cards);
   }
 }
 
 function use5050() {
-  if (lifelines.fifty <= 0 || answerSelected || currentQuestionType === 'fill_blank') return;
-  lifelines.fifty = 0;
-  updateStats();
+  if (answerSelected || currentQuestionType === 'fill_blank') return;
+  if (gameMode === 'multi') { if(getCurrentPlayer().lifelines.fifty <= 0) return; getCurrentPlayer().lifelines.fifty = 0; }
+  else { if(singleLifelines.fifty <= 0) return; singleLifelines.fifty = 0; }
   
+  updateStats();
   const q = currentQuestions[questionIndex];
   const cards = Array.from(document.querySelectorAll('.option-card'));
   let wrongCards = cards.filter(c => c.innerText !== q.answer);
-  
-  // remove half the wrong cards
   wrongCards = wrongCards.sort(() => 0.5 - Math.random()).slice(0, wrongCards.length - 1);
   wrongCards.forEach(c => c.classList.add('faded-out'));
 }
 
 function useSkip() {
-  if (lifelines.skip <= 0 || answerSelected) return;
-  lifelines.skip = 0;
+  if (answerSelected) return;
+  if (gameMode === 'multi') { if(getCurrentPlayer().lifelines.skip <= 0) return; getCurrentPlayer().lifelines.skip = 0; }
+  else { if(singleLifelines.skip <= 0) return; singleLifelines.skip = 0; }
   clearInterval(timerInterval);
   onNext();
 }
 
 function useHint() {
-  if (lifelines.hint <= 0 || answerSelected) return;
-  lifelines.hint = 0;
+  if (answerSelected) return;
+  if (gameMode === 'multi') { if(getCurrentPlayer().lifelines.hint <= 0) return; getCurrentPlayer().lifelines.hint = 0; }
+  else { if(singleLifelines.hint <= 0) return; singleLifelines.hint = 0; }
   updateStats();
-  const q = currentQuestions[questionIndex];
   const hintBox = document.getElementById('hint-display');
-  hintBox.innerText = "💡 Hint: " + (q.hint || "Trust your memory, no specific hint for this one!");
+  hintBox.innerText = "💡 Hint: " + (currentQuestions[questionIndex].hint || "Trust your memory!");
   hintBox.classList.remove('hidden');
 }
 
@@ -304,7 +349,6 @@ function onOptionSelected(selectedTxt, cardEl, correctTxt, opts) {
     if (isCorrect) cardEl.classList.add('selected-correct');
     else cardEl.classList.add('selected-wrong');
   }
-  
   if (!isCorrect && cards.length > 0) {
     cards.forEach(c => { if (c.innerText === correctTxt) c.classList.add('correct-answer'); });
   }
@@ -318,82 +362,88 @@ function onAnswerEvaluated(isCorrect, correctTxt, cards) {
   const subtext = document.getElementById('feedback-subtext');
   
   footer.classList.remove('hidden');
-  
   const q = currentQuestions[questionIndex];
   const refText = q.reference ? `Reference: ${q.reference}` : '';
   
+  if (gameMode === 'multi') {
+    let cp = getCurrentPlayer();
+    if (isCorrect) cp.score++; else cp.wrong++;
+  } else {
+    if (isCorrect) { score += 10 + (streak * 2); streak++; if (streak > maxStreak) maxStreak = streak; }
+    else { streak = 0; }
+  }
+
   if (isCorrect) {
-    score += 10 + (streak * 2);
-    streak++;
-    if (streak > maxStreak) maxStreak = streak;
-    
-    playSound('correct');
-    footer.classList.add('correct');
-    msg.innerHTML = "<h2>Excellent! 🎉</h2>";
-    subtext.innerText = refText;
-    document.getElementById('question-avatar').classList.remove('bounce-in');
-    void document.getElementById('question-avatar').offsetWidth;
-    document.getElementById('question-avatar').classList.add('jump');
+    playSound('correct'); footer.classList.add('correct');
+    msg.innerHTML = "<h2>Excellent! 🎉</h2>"; subtext.innerText = refText;
+    document.getElementById('question-avatar').className = 'avatar jump';
     speak("Correct!");
   } else {
-    streak = 0;
-    playSound('wrong');
-    footer.classList.add('wrong');
+    playSound('wrong'); footer.classList.add('wrong');
     if(!answerSelected) msg.innerHTML = `<h2>Time's up! ⏰</h2>`;
     else msg.innerHTML = `<h2>Incorrect 😔</h2>`;
-    
     subtext.innerText = `The correct answer was: ${correctTxt}. ${refText}`;
     speak("Incorrect.");
   }
-  
   updateStats();
 }
 
 function onNext() {
-  questionIndex++;
-  if (questionIndex >= currentQuestions.length) {
-    endQuiz();
+  if (gameMode === 'multi') {
+    currentTurn++;
+    if (currentTurn >= maxTurnsPerRound) endQuiz();
+    else { questionIndex++; loadQuestion(); }
   } else {
-    loadQuestion();
+    questionIndex++;
+    if (questionIndex >= currentQuestions.length) endQuiz();
+    else loadQuestion();
   }
-  updateStats();
 }
 
 function endQuiz() {
   topBar.classList.add('hidden');
   playSound('complete');
   
-  document.getElementById('final-score').innerText = score;
-  document.getElementById('final-streak').innerText = maxStreak;
-  
-  // Save Leaderboard
-  const date = new Date().toLocaleDateString();
-  leaderboards.push({ score, date, streak: maxStreak });
-  leaderboards.sort((a,b) => b.score - a.score);
-  leaderboards = leaderboards.slice(0, 10); // Keep top 10
-  localStorage.setItem('bibleQuizLeaderboard', JSON.stringify(leaderboards));
-  
   const bContainer = document.getElementById('badges-container');
   bContainer.innerHTML = '';
+  document.getElementById('encouragement-message').innerText = "";
   
-  let msg = "Great job! Keep studying the Word.";
-  let percentage = score / (currentQuestions.length * 10);
-  
-  if (percentage >= 0.9) {
-    msg = "Incredible! You are a Bible Scholar! 🏆";
-    bContainer.innerHTML += '<div class="badge">Bible Scholar</div>';
-  } else if (percentage >= 0.5) {
-    msg = "Good work! You're on your way! 🌟";
-    bContainer.innerHTML += '<div class="badge">Faith Starter</div>';
+  if (gameMode === 'multi') {
+    document.getElementById('result-title').innerText = "Round Complete!";
+    document.querySelector('.score-summary').innerHTML = `
+      <p style="font-size:2rem;color:var(--primary);margin-bottom:10px;">${players[0].name} : ${players[0].score} pts</p>
+      <p style="font-size:2rem;color:var(--secondary);">${players[1].name} : ${players[1].score} pts</p>
+    `;
+    let winner = null;
+    if (players[0].score > players[1].score) winner = players[0].name;
+    else if (players[1].score > players[0].score) winner = players[1].name;
+    
+    if (winner) {
+      document.getElementById('encouragement-message').innerText = `🏆 ${winner} wins!`;
+      speak(winner + " wins the game!");
+    } else {
+      document.getElementById('encouragement-message').innerText = "It's a Tie!";
+      speak("It's a tie game!");
+    }
   } else {
-    msg = "Keep reading and learning! 📖";
-  }
-  if (maxStreak >= 5) {
-    bContainer.innerHTML += '<div class="badge">Hot Streak 🔥</div>';
+    document.getElementById('result-title').innerText = "Quiz Complete!";
+    document.querySelector('.score-summary').innerHTML = `
+      <p>Final Score: <span class="highlight">${score}</span></p>
+      <p>Longest Streak: <span class="highlight">${maxStreak}</span></p>
+    `;
+    
+    const date = new Date().toLocaleDateString();
+    leaderboards.push({ score, date, streak: maxStreak });
+    leaderboards.sort((a,b) => b.score - a.score);
+    leaderboards = leaderboards.slice(0, 10);
+    localStorage.setItem('bibleQuizLeaderboard', JSON.stringify(leaderboards));
+    
+    let percentage = score / (currentQuestions.length * 10);
+    if (percentage >= 0.9) bContainer.innerHTML += '<div class="badge">Bible Scholar</div>';
+    else if (percentage >= 0.5) bContainer.innerHTML += '<div class="badge">Faith Starter</div>';
+    if (maxStreak >= 5) bContainer.innerHTML += '<div class="badge">Hot Streak 🔥</div>';
   }
   
-  document.getElementById('encouragement-message').innerText = msg;
-  speak("Quiz complete. " + msg.replace(/[\u{1F600}-\u{1F6FF}]/gu, ''));
   switchScreen('result');
 }
 

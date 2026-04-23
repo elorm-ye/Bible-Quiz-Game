@@ -1236,5 +1236,697 @@
     "difficulty": "easy",
     "reference": "1 Samuel 17",
     "hint": "He wrote many Psalms."
+  },
+  {
+    "question": "What was the first plague of Egypt?",
+    "options": [
+      "Frogs",
+      "Blood",
+      "Locusts",
+      "Boils"
+    ],
+    "answer": "Blood",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Exodus 7",
+    "hint": "The Nile turned red."
+  },
+  {
+    "question": "Who was the first king of Israel?",
+    "options": [
+      "Saul",
+      "David",
+      "Solomon",
+      "Samuel"
+    ],
+    "answer": "Saul",
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "1 Samuel 9",
+    "hint": "He was very tall."
+  },
+  {
+    "question": "What is the last book of the Old Testament?",
+    "options": [
+      "Zechariah",
+      "Malachi",
+      "Matthew",
+      "Micah"
+    ],
+    "answer": "Malachi",
+    "category": "Deep Doctrine",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Malachi",
+    "hint": "Look at the end of the OT."
+  },
+  {
+    "question": "How many tribes of Israel were there?",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "7"
+    ],
+    "answer": "12",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Genesis 49",
+    "hint": "Same as the number of disciples."
+  },
+  {
+    "question": "Who was the oldest man in the Bible?",
+    "options": [
+      "Adam",
+      "Moses",
+      "Methuselah",
+      "Noah"
+    ],
+    "answer": "Methuselah",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Genesis 5",
+    "hint": "He lived 969 years."
+  },
+  {
+    "question": "For the wages of sin is _, but the gift of God is eternal life in Christ Jesus our Lord.",
+    "options": [],
+    "answer": "death",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "medium",
+    "reference": "Romans 6:23",
+    "hint": "The opposite of life."
+  },
+  {
+    "question": "I am the Alpha and the Omega, the First and the Last, the Beginning and the _.",
+    "options": [],
+    "answer": "End",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "medium",
+    "reference": "Revelation 22:13",
+    "hint": "The opposite of beginning."
+  },
+  {
+    "question": "God created Eve from Adam's rib.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "easy",
+    "reference": "Genesis 2:21-22",
+    "hint": "A bone from his side."
+  },
+  {
+    "question": "Moses entered the Promised Land.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "medium",
+    "reference": "Deuteronomy 34",
+    "hint": "He only saw it from a mountain."
+  },
+  {
+    "question": "I was a tax collector before Jesus called me. Who am I?",
+    "options": [
+      "Luke",
+      "Matthew",
+      "John",
+      "Peter"
+    ],
+    "answer": "Matthew",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "easy",
+    "reference": "Matthew 9:9",
+    "hint": "Also known as Levi."
+  },
+  {
+    "question": "Who wrote the Book of Acts?",
+    "options": [
+      "Paul",
+      "Peter",
+      "Luke",
+      "John"
+    ],
+    "answer": "Luke",
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "hard",
+    "reference": "Acts 1",
+    "hint": "The beloved physician."
+  },
+  {
+    "question": "Which city's walls fell after the Israelites marched around them?",
+    "options": [
+      "Jerusalem",
+      "Jericho",
+      "Babylon",
+      "Nineveh"
+    ],
+    "answer": "Jericho",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Joshua 6",
+    "hint": "Joshua led the charge."
+  },
+  {
+    "question": "Who interpreted Pharaoh's dreams about cows and grain?",
+    "options": [
+      "Moses",
+      "Daniel",
+      "Joseph",
+      "Jacob"
+    ],
+    "answer": "Joseph",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Genesis 41",
+    "hint": "He wore a coat of many colors."
+  },
+  {
+    "question": "To what city did God tell Jonah to go?",
+    "options": [
+      "Tarshish",
+      "Nineveh",
+      "Jerusalem",
+      "Damascus"
+    ],
+    "answer": "Nineveh",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Jonah 1",
+    "hint": "He tried to flee to Tarshish instead."
+  },
+  {
+    "question": "I betrayed Jesus for 30 pieces of silver. Who am I?",
+    "options": [
+      "Peter",
+      "Judas",
+      "Thomas",
+      "John"
+    ],
+    "answer": "Judas",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "easy",
+    "reference": "Matthew 26:15",
+    "hint": "The treasurer of the disciples."
+  },
+  {
+    "question": "What was the name of the garden where Adam and Eve lived?",
+    "options": [
+      "Gethsemane",
+      "Eden",
+      "Olives",
+      "Sinai"
+    ],
+    "answer": "Eden",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Genesis 2",
+    "hint": "The first garden."
+  },
+  {
+    "question": "How many days and nights did it rain during Noah's flood?",
+    "options": [
+      "7",
+      "12",
+      "30",
+      "40"
+    ],
+    "answer": "40",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Genesis 7",
+    "hint": "A common biblical number for testing."
+  },
+  {
+    "question": "Who was swallowed by a great fish?",
+    "options": [
+      "Peter",
+      "Jonah",
+      "Moses",
+      "Paul"
+    ],
+    "answer": "Jonah",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Jonah 1",
+    "hint": "He ran from God."
+  },
+  {
+    "question": "Who killed Goliath?",
+    "options": [
+      "Saul",
+      "Jonathan",
+      "David",
+      "Samson"
+    ],
+    "answer": "David",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "1 Samuel 17",
+    "hint": "A shepherd boy."
+  },
+  {
+    "question": "The love of _ is a root of all kinds of evil.",
+    "options": [],
+    "answer": "money",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "medium",
+    "reference": "1 Timothy 6:10",
+    "hint": "Wealth or currency."
+  },
+  {
+    "question": "I can do all things through _ who strengthens me.",
+    "options": [],
+    "answer": "Christ",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "reference": "Philippians 4:13",
+    "hint": "The Messiah."
+  },
+  {
+    "question": "David was the first king of Israel.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "medium",
+    "reference": "1 Samuel 9",
+    "hint": "Saul was first."
+  },
+  {
+    "question": "Paul was originally known as Saul.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "easy",
+    "reference": "Acts 9",
+    "hint": "He was from Tarsus."
+  },
+  {
+    "question": "I denied Jesus three times before the rooster crowed. Who am I?",
+    "options": [
+      "Judas",
+      "Peter",
+      "Thomas",
+      "John"
+    ],
+    "answer": "Peter",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "easy",
+    "reference": "Matthew 26:75",
+    "hint": "He walked on water."
+  },
+  {
+    "question": "Who was the mother of John the Baptist?",
+    "options": [
+      "Mary",
+      "Martha",
+      "Elizabeth",
+      "Hannah"
+    ],
+    "answer": "Elizabeth",
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "hard",
+    "reference": "Luke 1",
+    "hint": "A relative of Mary."
+  },
+  {
+    "question": "What did God provide for the Israelites to eat in the wilderness?",
+    "options": [
+      "Bread and cheese",
+      "Manna and quail",
+      "Fruit and nuts",
+      "Fish and loaves"
+    ],
+    "answer": "Manna and quail",
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Exodus 16",
+    "hint": "Bread from heaven."
+  },
+  {
+    "question": "Who was thrown into the lion's den?",
+    "options": [
+      "Joseph",
+      "Daniel",
+      "David",
+      "Shadrach"
+    ],
+    "answer": "Daniel",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Daniel 6",
+    "hint": "He prayed three times a day."
+  },
+  {
+    "question": "Which disciple doubted Jesus' resurrection until he saw Him?",
+    "options": [
+      "Peter",
+      "John",
+      "Judas",
+      "Thomas"
+    ],
+    "answer": "Thomas",
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "John 20",
+    "hint": "Known as 'Doubting'."
+  },
+  {
+    "question": "Where did Jesus turn water into wine?",
+    "options": [
+      "Jerusalem",
+      "Cana",
+      "Bethlehem",
+      "Nazareth"
+    ],
+    "answer": "Cana",
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "John 2",
+    "hint": "At a wedding feast."
+  },
+  {
+    "question": "Who was the giant that David defeated?",
+    "options": [
+      "Goliath",
+      "Samson",
+      "Saul",
+      "Naboth"
+    ],
+    "answer": "Goliath",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "1 Samuel 17",
+    "hint": "A Philistine champion."
+  },
+  {
+    "question": "I was originally a persecutor of the church but became its greatest missionary. Who am I?",
+    "options": [
+      "Peter",
+      "Paul",
+      "Stephen",
+      "Barnabas"
+    ],
+    "answer": "Paul",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "easy",
+    "reference": "Acts 9",
+    "hint": "Formerly known as Saul."
+  },
+  {
+    "question": "In the beginning God created the heavens and the _.",
+    "options": [],
+    "answer": "earth",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "reference": "Genesis 1:1",
+    "hint": "The planet we live on."
+  },
+  {
+    "question": "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and _-control.",
+    "options": [],
+    "answer": "self",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "medium",
+    "reference": "Galatians 5:22-23",
+    "hint": "Discipline over oneself."
+  },
+  {
+    "question": "Jesus was baptized by Peter.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "False",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "easy",
+    "reference": "Matthew 3",
+    "hint": "It was John the Baptist."
+  },
+  {
+    "question": "Noah took clean animals into the ark by sevens.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "hard",
+    "reference": "Genesis 7:2",
+    "hint": "Not just two by two for clean animals."
+  },
+  {
+    "question": "Who was the wife of Abraham?",
+    "options": [
+      "Rebekah",
+      "Rachel",
+      "Sarah",
+      "Leah"
+    ],
+    "answer": "Sarah",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Genesis 17",
+    "hint": "Her original name was Sarai."
+  },
+  {
+    "question": "What was the sign of God's covenant with Noah?",
+    "options": [
+      "A dove",
+      "An olive branch",
+      "A rainbow",
+      "A star"
+    ],
+    "answer": "A rainbow",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Genesis 9",
+    "hint": "A colorful bow in the clouds."
+  },
+  {
+    "question": "Who built the first temple in Jerusalem?",
+    "options": [
+      "David",
+      "Solomon",
+      "Hezekiah",
+      "Josiah"
+    ],
+    "answer": "Solomon",
+    "category": "Kings & Prophets",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "1 Kings 6",
+    "hint": "David's son."
+  },
+  {
+    "question": "What was the name of the blind man Jesus healed in Jericho?",
+    "options": [
+      "Bartimaeus",
+      "Zacchaeus",
+      "Lazarus",
+      "Nicodemus"
+    ],
+    "answer": "Bartimaeus",
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "hard",
+    "reference": "Mark 10:46",
+    "hint": "Son of Timaeus."
+  },
+  {
+    "question": "Who climbed a sycamore tree to see Jesus?",
+    "options": [
+      "Peter",
+      "Zacchaeus",
+      "Matthew",
+      "John"
+    ],
+    "answer": "Zacchaeus",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "reference": "Luke 19",
+    "hint": "A short tax collector."
+  },
+  {
+    "question": "I am the way, the _, and the life.",
+    "options": [],
+    "answer": "truth",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "reference": "John 14:6",
+    "hint": "Not a lie."
+  },
+  {
+    "question": "Jesus wept is the shortest verse in the English Bible.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "easy",
+    "reference": "John 11:35",
+    "hint": "It contains only two words."
+  },
+  {
+    "question": "Elijah was taken up to heaven in a whirlwind.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "medium",
+    "reference": "2 Kings 2",
+    "hint": "With chariots of fire."
+  },
+  {
+    "question": "I washed my hands of Jesus' blood during His trial. Who am I?",
+    "options": [
+      "Herod",
+      "Caesar",
+      "Pilate",
+      "Caiaphas"
+    ],
+    "answer": "Pilate",
+    "category": "Who Am I?",
+    "type": "who_am_i",
+    "difficulty": "medium",
+    "reference": "Matthew 27:24",
+    "hint": "The Roman governor."
+  },
+  {
+    "question": "Who was the brother of Moses?",
+    "options": [
+      "Abraham",
+      "Isaac",
+      "Jacob",
+      "Aaron"
+    ],
+    "answer": "Aaron",
+    "category": "Characters",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Exodus 4",
+    "hint": "He was Israel's first high priest."
+  },
+  {
+    "question": "What sea did the Israelites cross on dry land?",
+    "options": [
+      "Dead Sea",
+      "Mediterranean Sea",
+      "Red Sea",
+      "Sea of Galilee"
+    ],
+    "answer": "Red Sea",
+    "category": "Miracles",
+    "type": "multiple_choice",
+    "difficulty": "easy",
+    "reference": "Exodus 14",
+    "hint": "Moses stretched out his hand over it."
+  },
+  {
+    "question": "Who recognized Jesus as the Messiah while He was a baby in the temple?",
+    "options": [
+      "Simeon",
+      "Zechariah",
+      "Nicodemus",
+      "Joseph"
+    ],
+    "answer": "Simeon",
+    "category": "New Testament",
+    "type": "multiple_choice",
+    "difficulty": "hard",
+    "reference": "Luke 2",
+    "hint": "He had been promised he wouldn't die before seeing the Christ."
+  },
+  {
+    "question": "What kind of wood was Noah's ark made from?",
+    "options": [
+      "Cedar",
+      "Gopher",
+      "Acacia",
+      "Oak"
+    ],
+    "answer": "Gopher",
+    "category": "Old Testament",
+    "type": "multiple_choice",
+    "difficulty": "hard",
+    "reference": "Genesis 6:14",
+    "hint": "A specific type of wood mentioned only once."
+  },
+  {
+    "question": "I am the bread of _, whoever comes to me will never go hungry.",
+    "options": [],
+    "answer": "life",
+    "category": "Fill in the Blanks",
+    "type": "fill_blank",
+    "difficulty": "medium",
+    "reference": "John 6:35",
+    "hint": "Opposite of death."
+  },
+  {
+    "question": "John the Baptist wore clothes made of camel's hair.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "category": "True or False",
+    "type": "true_false",
+    "difficulty": "medium",
+    "reference": "Matthew 3:4",
+    "hint": "He also ate locusts and wild honey."
   }
 ]

@@ -235,3 +235,18 @@ p {font-size: 1.1rem; line-height: 1.5;}
 @keyframes wobble { 0% { transform: translateX(0%); } 15% { transform: translateX(-5%) rotate(-5deg); } 30% { transform: translateX(4%) rotate(3deg); } 45% { transform: translateX(-3%) rotate(-3deg); } 60% { transform: translateX(2%) rotate(2deg); } 75% { transform: translateX(-1%) rotate(-1deg); } 100% { transform: translateX(0%); } }
 
 @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } .stats-container {flex-wrap:wrap; justify-content:center;}}
+
+/* New Verses/Multiplayer UI */
+.dropdown-fancy, .fancy-input {
+  font-family: var(--font-family); font-size: 1.1rem; padding: 10px;
+  border-radius: 8px; border: 2px solid var(--border-color); width: 100%;
+}
+.fancy-input:focus, .dropdown-fancy:focus { outline:none; border-color: var(--secondary); background:#f0f9ff;}
+
+#mini-scoreboard { background: white; border: 2px solid var(--border-color); border-radius: 12px; padding: 10px; width: 100%; }
+.mini-score-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight:800; font-size:1.3rem;}
+.mini-table { display: flex; flex-direction: column; width: 100%; }
+.m-row { display: flex; justify-content: space-between; padding: 5px 10px; border-radius:6px; font-weight:700;}
+.m-row.header { color: var(--text-light); text-transform: uppercase; font-size: 0.9rem;}
+#turn-announcer { color: var(--primary-shadow); animation: pulse 1s infinite alternate;}
+@keyframes pulse { from { transform: scale(1); } to { transform: scale(1.05); } }
