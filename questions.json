@@ -1213,16 +1213,6 @@
     "hint": "He was born in the city of David."
   },
   {
-    "question": "For God so loved the world that he gave his one and only _, that whoever believes in him shall not perish...",
-    "options": [],
-    "answer": "Son",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "easy",
-    "reference": "John 3:16",
-    "hint": "A three letter word."
-  },
-  {
     "question": "I was a shepherd, I killed a giant, and I became king. Who am I?",
     "options": [
       "Saul",
@@ -1311,26 +1301,6 @@
     "difficulty": "medium",
     "reference": "Genesis 5",
     "hint": "He lived 969 years."
-  },
-  {
-    "question": "For the wages of sin is _, but the gift of God is eternal life in Christ Jesus our Lord.",
-    "options": [],
-    "answer": "death",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "medium",
-    "reference": "Romans 6:23",
-    "hint": "The opposite of life."
-  },
-  {
-    "question": "I am the Alpha and the Omega, the First and the Last, the Beginning and the _.",
-    "options": [],
-    "answer": "End",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "medium",
-    "reference": "Revelation 22:13",
-    "hint": "The opposite of beginning."
   },
   {
     "question": "God created Eve from Adam's rib.",
@@ -1509,26 +1479,6 @@
     "hint": "A shepherd boy."
   },
   {
-    "question": "The love of _ is a root of all kinds of evil.",
-    "options": [],
-    "answer": "money",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "medium",
-    "reference": "1 Timothy 6:10",
-    "hint": "Wealth or currency."
-  },
-  {
-    "question": "I can do all things through _ who strengthens me.",
-    "options": [],
-    "answer": "Christ",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "easy",
-    "reference": "Philippians 4:13",
-    "hint": "The Messiah."
-  },
-  {
     "question": "David was the first king of Israel.",
     "options": [
       "True",
@@ -1675,26 +1625,6 @@
     "hint": "Formerly known as Saul."
   },
   {
-    "question": "In the beginning God created the heavens and the _.",
-    "options": [],
-    "answer": "earth",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "easy",
-    "reference": "Genesis 1:1",
-    "hint": "The planet we live on."
-  },
-  {
-    "question": "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and _-control.",
-    "options": [],
-    "answer": "self",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "medium",
-    "reference": "Galatians 5:22-23",
-    "hint": "Discipline over oneself."
-  },
-  {
     "question": "Jesus was baptized by Peter.",
     "options": [
       "True",
@@ -1796,16 +1726,6 @@
     "hint": "A short tax collector."
   },
   {
-    "question": "I am the way, the _, and the life.",
-    "options": [],
-    "answer": "truth",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "easy",
-    "reference": "John 14:6",
-    "hint": "Not a lie."
-  },
-  {
     "question": "Jesus wept is the shortest verse in the English Bible.",
     "options": [
       "True",
@@ -1905,16 +1825,6 @@
     "difficulty": "hard",
     "reference": "Genesis 6:14",
     "hint": "A specific type of wood mentioned only once."
-  },
-  {
-    "question": "I am the bread of _, whoever comes to me will never go hungry.",
-    "options": [],
-    "answer": "life",
-    "category": "Fill in the Blanks",
-    "type": "fill_blank",
-    "difficulty": "medium",
-    "reference": "John 6:35",
-    "hint": "Opposite of death."
   },
   {
     "question": "John the Baptist wore clothes made of camel's hair.",

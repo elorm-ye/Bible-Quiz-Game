@@ -131,12 +131,7 @@ async function init() {
     });
     ttsBtn.classList.add('disabled-icon');
 
-    // Inputs
-    document.getElementById('btn-submit-blank').addEventListener('click', () => {
-      const val = document.getElementById('fill-blank-input').value.trim();
-      if(!val) return;
-      onOptionSelected(val.toLowerCase(), null, currentQuestions[questionIndex].answer.toLowerCase(), []);
-    });
+
 
     // Lifelines
     document.getElementById('life-5050').addEventListener('click', use5050);
@@ -203,7 +198,7 @@ function updateStats() {
   if (gameMode === 'multi') {
     updateMiniScoreboard();
     let cp = getCurrentPlayer();
-    document.getElementById('life-5050').disabled = cp.lifelines.fifty <= 0 || currentQuestionType === 'fill_blank';
+    document.getElementById('life-5050').disabled = cp.lifelines.fifty <= 0;
     document.getElementById('life-skip').disabled = cp.lifelines.skip <= 0;
     document.getElementById('life-hint').disabled = cp.lifelines.hint <= 0;
   } else {
@@ -212,7 +207,7 @@ function updateStats() {
     const prog = ((questionIndex) / currentQuestions.length) * 100;
     document.getElementById('progress-bar-fill').style.width = prog + '%';
     
-    document.getElementById('life-5050').disabled = singleLifelines.fifty <= 0 || currentQuestionType === 'fill_blank';
+    document.getElementById('life-5050').disabled = singleLifelines.fifty <= 0;
     document.getElementById('life-skip').disabled = singleLifelines.skip <= 0;
     document.getElementById('life-hint').disabled = singleLifelines.hint <= 0;
   }
@@ -268,25 +263,16 @@ function loadQuestion() {
 
 function renderOptions(q) {
   const grid = document.getElementById('options-grid');
-  const fillArea = document.getElementById('fill-blank-area');
   grid.innerHTML = '';
   
-  if (currentQuestionType === 'fill_blank') {
-    grid.classList.add('hidden');
-    fillArea.classList.remove('hidden');
-    const input = document.getElementById('fill-blank-input');
-    input.value = ''; input.focus();
-  } else {
-    grid.classList.remove('hidden');
-    fillArea.classList.add('hidden');
-    let shuffledOpts = [...q.options].sort(() => 0.5 - Math.random());
-    shuffledOpts.forEach(opt => {
-      const card = document.createElement('div');
-      card.className = 'option-card'; card.innerText = opt;
-      card.onclick = () => onOptionSelected(opt, card, q.answer, shuffledOpts);
-      grid.appendChild(card);
-    });
-  }
+  grid.classList.remove('hidden');
+  let shuffledOpts = [...q.options].sort(() => 0.5 - Math.random());
+  shuffledOpts.forEach(opt => {
+    const card = document.createElement('div');
+    card.className = 'option-card'; card.innerText = opt;
+    card.onclick = () => onOptionSelected(opt, card, q.answer, shuffledOpts);
+    grid.appendChild(card);
+  });
 }
 
 function timerTick() {
@@ -306,7 +292,7 @@ function timerTick() {
 }
 
 function use5050() {
-  if (answerSelected || currentQuestionType === 'fill_blank') return;
+  if (answerSelected) return;
   if (gameMode === 'multi') { if(getCurrentPlayer().lifelines.fifty <= 0) return; getCurrentPlayer().lifelines.fifty = 0; }
   else { if(singleLifelines.fifty <= 0) return; singleLifelines.fifty = 0; }
   
