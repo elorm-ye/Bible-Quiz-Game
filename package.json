@@ -1,0 +1,20 @@
+{
+  "name": "biblequizgame",
+  "version": "1.0.0",
+  "description": "Interactive Bible Quiz Game for Teens",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bible",
+    "quiz",
+    "game"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^41.3.0"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bible Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Music Audio -->
+  <audio id="bgm" loop>
+    <!-- We won't include a source unless requested, but we have a toggle for it -->
+  </audio>
+
+  <div id="app">
+    <!-- Header: Streak, Points, etc. -->
+    <header id="top-bar" class="hidden">
+      <div class="stats-container">
+        <div class="stat streak-stat">
+          <span class="icon">🔥</span>
+          <span id="streak-counter">0</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar-bg">
+            <div id="progress-bar-fill"></div>
+            <div class="progress-highlight"></div>
+          </div>
+        </div>
+        <div class="stat score-stat">
+          <span class="icon">💎</span>
+          <span id="score-counter">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen slide-up">
+      <div class="welcome-center">
+        <div class="title-container">
+          <h1>Bible Quiz Game</h1>
+          <p>Test your knowledge and grow your faith!</p>
+        </div>
+        <div class="character-greeting">
+          <div class="avatar jump">🧔🏽‍♂️</div>
+          <div class="speech-bubble">Welcome! Are you ready to begin?</div>
+        </div>
+        <button id="btn-start" class="btn btn-primary btn-large wobble-hover">START QUIZ</button>
+      </div>
+    </div>
+
+    <!-- Category Screen -->
+    <div id="category-screen" class="screen hidden">
+      <h2>Choose a Category</h2>
+      <div class="category-grid" id="category-grid">
+        <!-- Categories injected here -->
+      </div>
+    </div>
+
+    <!-- Question Screen -->
+    <div id="question-screen" class="screen hidden">
+      <div class="main-quiz-area">
+        <div class="question-header">
+          <div class="timer-stat">
+            <span class="icon">⏱️</span> <span id="timer-display">15</span>
+          </div>
+        </div>
+        
+        <div class="character-area">
+          <div id="question-avatar" class="avatar bounce-in">🧔🏽‍♂️</div>
+          <div id="question-speech" class="speech-bubble">Who built the ark?</div>
+        </div>
+
+        <div class="options-grid" id="options-grid">
+          <!-- Options injected here -->
+        </div>
+      </div>
+
+      <!-- Footer for Feedback -->
+      <footer id="feedback-footer" class="hidden">
+        <div class="feedback-content">
+          <div id="feedback-message" class="feedback-text">
+            <h2>Excellent!</h2>
+          </div>
+          <button id="btn-next" class="btn btn-primary">CONTINUE</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen hidden">
+      <div class="result-center">
+        <h1 id="result-title">Quiz Complete!</h1>
+        <div class="badges-container" id="badges-container">
+          <!-- Badges injected here -->
+        </div>
+        <div class="score-summary">
+          <p>Final Score: <span id="final-score" class="highlight">0</span></p>
+          <p>Longest Streak: <span id="final-streak" class="highlight">0</span></p>
+          <p id="encouragement-message">Great job! Keep studying the Word.</p>
+        </div>
+        <div class="action-buttons">
+          <button id="btn-restart" class="btn btn-primary btn-large">PLAY AGAIN</button>
+          <button id="btn-home" class="btn btn-secondary btn-large">CATEGORIES</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
