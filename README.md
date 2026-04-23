@@ -48,4 +48,4 @@ At the end of a round, players are ranked and visibly rewarded based on their fi
 - `5+ Question Streak`: **Hot Streak Badge**
 
 ---
-*Created for Sunday Youth Services.*
+*Created for ICGC Evangel Temple Youth Services.*
