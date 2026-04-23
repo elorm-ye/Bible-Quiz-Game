@@ -460,4 +460,25 @@ function showLeaderboards() {
   switchScreen('leaderboard');
 }
 
-document.addEventListener('DOMContentLoaded', init);
+// Scroll Wheel/To-Top Button Logic
+function setupScrollButton() {
+  const scrollBtn = document.getElementById('scroll-top-btn');
+  if(!scrollBtn) return;
+  
+  window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.classList.remove('hidden');
+    } else {
+      scrollBtn.classList.add('hidden');
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  setupScrollButton();
+});
